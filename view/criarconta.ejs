@@ -1,0 +1,74 @@
+<%- include('./header.ejs') %>
+    <br>
+    <br>
+    <br>
+    <section id="description">
+        <div class="inner">
+            <div class="row">
+                <div class="col-12">
+                    <div class="principal">
+                        <h1 class="text-center">O último cadastro que você precisará fazer</h1>
+                        <h4 class="text-center">Criar cadastro único do cliente</h4>
+                    </div>
+                    <form action="/criarconta" method="POST" autocomplete="on" class="text-center">
+                        <div class="name">
+                            <label for="name">Nome completo</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="" required validate>
+                        </div>
+                        <br>
+                        <div class="phone">
+                            <label for="phone">Celular</label>
+                            <input onkeypress="mascara(this)" maxlength="15" minlength="15" type="tel" class="form-control" id="phone" name="phone" placeholder="" required validate value="<%= cpf %>">
+                        </div>
+                        <br>
+                        <div class="email">
+                            <label for="email">E-mail</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="" required validate>
+                        </div>
+                        <br>
+                        <div class="birthday">
+                            <label for="birthday">Data de nascimento</label>
+                            <input type="date" class="form-control" id="birthday" name="birthday" placeholder="" required validate>
+                        </div>
+                        <br>
+                        <div class="endereco">
+                            <label for="endereco">Endereço</label>
+                            <input type="text" class="form-control" id="endereco" name="endereco" placeholder="" required validate>
+                        </div>
+                        <br>
+                        <div class="cpf">
+                            <label for="cpf">CPF</label>
+                            <input type="text" class="form-control" id="cpf" name="cpf" placeholder="" required validate value="">
+                            <% if (id) { %>
+                            <input type="hidden" class="form-control" id="id" name="id" placeholder="" required validate value="<%= id %>">
+                            <% } %>
+                        </div>
+                        <br>
+                        <br>
+                        <input type="submit" id="envia" class="button primary" value="Criar conta e Cadastrar">
+                    </form>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    <%- include('./footer.ejs') %>
+
+    <script type="text/javascript">
+        function mascara(telefone){ 
+            if(telefone.value.length == 0)
+                telefone.value = '(' + telefone.value; //quando começamos a digitar, o script irá inserir um parênteses no começo do campo.
+            if(telefone.value.length == 3)
+                telefone.value = telefone.value + ') '; //quando o campo já tiver 3 caracteres (um parênteses e 2 números) o script irá inserir mais um parênteses, fechando assim o código de área.
+    
+            if(telefone.value.length == 10)
+                telefone.value = telefone.value + '-'; //quando o campo já tiver 8 caracteres, o script irá inserir um tracinho, para melhor visualização do telefone.
+    
+        }
+    </script>
+    
+    </body>
+</html>

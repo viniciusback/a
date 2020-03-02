@@ -1,0 +1,95 @@
+{
+  "users": [
+    {
+      "nome": "luiz",
+      "celular": "(14) 98171-7586",
+      "email": "lh.alvesf@gmail.com",
+      "data_nascimento": "06/09/1992",
+      "endereco": "Rua Getúlio Vargas, 4-82",
+      "cpf": "123",
+      "cadastro": [
+        1,
+        777,
+        888
+      ]
+    }
+  ],
+  "precadastro": [
+    {
+      "nome": "precadastro",
+      "celular": "123456",
+      "cadastro": [
+        777
+      ]
+    },
+    {
+      "nome": "precadastro",
+      "celular": "11111111111111",
+      "cadastro": [
+        777
+      ]
+    },
+    {
+      "nome": "precadastro",
+      "celular": "(14) 98171-7585",
+      "cadastro": [
+        777
+      ]
+    },
+    {
+      "nome": "precadastro",
+      "celular": "(88) 88888-8888",
+      "cadastro": [
+        555
+      ]
+    },
+    {
+      "nome": "precadastro",
+      "celular": "(47) 99999-9999",
+      "cadastro": [
+        1
+      ]
+    },
+    {
+      "nome": "precadastro",
+      "celular": "(48) 99130-2020",
+      "cadastro": [
+        8
+      ]
+    },
+    {
+      "nome": "precadastro",
+      "celular": "(11) 11111-1111",
+      "cadastro": [
+        1111
+      ]
+    }
+  ],
+  "lojas": [
+    {
+      "id": "777",
+      "nome": "lojadoluiz",
+      "senha": "abc123"
+    },
+    {
+      "id": "555",
+      "nome": "lojadoluiz",
+      "senha": "abc123"
+    },
+    {
+      "id": "08",
+      "nome": "lojadage",
+      "senha": "2203"
+    },
+    {
+      "id": "220398",
+      "nome": "lojadovini",
+      "senha": "2243"
+    },
+    {
+      "id": "1111",
+      "nome": "lojateste",
+      "senha": "1212"
+    }
+  ]
+}

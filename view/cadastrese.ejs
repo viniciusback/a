@@ -1,0 +1,39 @@
+<%- include('./header.ejs') %>
+
+  <br>
+  <br>
+  <br>
+  <section id="register">
+    <div class="inner">
+      <h1 class="text-center">O cadastro da maneira mais fácil possível</h1>
+      <form action="/" method="POST" autocomplete="off" class="text-center">
+        <input type="hidden" name="lojaid" value="<%= id %>">
+        <div class="">
+            <input onkeypress="mascara(this)" id="cadastrese" maxlength="15" minlength="15" type="tel" class="" name="cel" placeholder="Cadastre-se cliente apenas com o celular" required validate />
+        </div>
+        <br>
+        <input type="submit" id="" class="button primary" value="Cadastrar">
+      </form>
+      <br>
+      <p class="text-center">Não tem conta no Cadastro Rápido ainda? <a href="/criarconta" class="">Criar conta</a></p>
+    </div>
+  </section>
+
+  
+
+  <%- include('./footer.ejs') %>
+  
+  <script type="text/javascript">
+    function mascara(telefone){ 
+        if(telefone.value.length == 0)
+            telefone.value = '(' + telefone.value; //quando começamos a digitar, o script irá inserir um parênteses no começo do campo.
+        if(telefone.value.length == 3)
+            telefone.value = telefone.value + ') '; //quando o campo já tiver 3 caracteres (um parênteses e 2 números) o script irá inserir mais um parênteses, fechando assim o código de área.
+
+        if(telefone.value.length == 10)
+            telefone.value = telefone.value + '-'; //quando o campo já tiver 8 caracteres, o script irá inserir um tracinho, para melhor visualização do telefone.
+
+    }
+</script>
+  </body>
+</html>
